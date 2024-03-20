@@ -58,7 +58,7 @@
                     {% if subfolderitem.title %}
                     {% if page.url == subfolderitem.jurl %}
                     <li class="level2items open"><a href="{{subfolderitem.jurl | remove: "/" }}">{{subfolderitem.title}}</a></li>
-                    {% elsif folderitem.jurl contains "http://" or folderitem.jurl contains "https://" %}
+                    {% elsif subfolderitem.jurl contains "http://" or subfolderitem.jurl contains "https://" %}
                     <li class="level2items"><a  class="noExtIcon" href="{{subfolderitem.jurl }}">{{subfolderitem.title}}</a></li>
                     {% else %}
                     <li class="level2items"><a href="{{subfolderitem.jurl | remove: "/" }}">{{subfolderitem.title}}</a></li>
@@ -73,7 +73,7 @@
                             {% if subsubfolderitem.title %}
                             {% if page.url == subsubfolderitem.jurl %}
                             <li class="level3items open"><a href="{{subsubfolderitem.jurl | remove: "/" }}">{{subsubfolderitem.title}}</a></li>
-                            {% elsif folderitem.jurl contains "http://" or folderitem.jurl contains "https://" %}
+                            {% elsif subsubfolderitem.jurl contains "http://" or subsubfolderitem.jurl contains "https://" %}
                             <li class="level3items"><a href="{{subsubfolderitem.jurl }}">{{subsubfolderitem.title}}</a></li>
                             {% else %}
                             <li class="level3items"><a href="{{subsubfolderitem.jurl | remove: "/" }}">{{subsubfolderitem.title}}</a></li>
